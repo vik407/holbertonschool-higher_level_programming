@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	listint_t *list_a = NULL, *list_b = NULL;
 
 	/* A list to check is coming? */
-	if (!list)
+	if (!list || list->next == NULL)
 		return (0);
 
 	list_b = list;
@@ -26,6 +26,7 @@ int check_cycle(listint_t *list)
 		/* And move the list */
 		list_a = list_a->next->next;
 		list_b = list_b->next;
-	} while (list_a && list_a->next);
+	} while (list_a && list_a->next && list_a->next->next);
+
 	return (0);
 }
