@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 /**
  *check_cycle - Write a function in C that checks if a singly linked list has a
  * cycle in it.
@@ -13,20 +11,24 @@ int check_cycle(listint_t *list)
 	listint_t *list_a = NULL, *list_b = NULL;
 
 	/* A list to check is coming? */
-	if (!list || list->next == NULL)
+	if (list == NULL || list->next == NULL)
+	{
 		return (0);
+	}
 
 	list_b = list;
 	list_a = list_b->next;
 	/* Do a loop to check for a cycle */
-	do {
+	while (list_a != NULL && list_a->next != NULL && list_a->next->next != NULL)
+	{
 		/* is a cycle */
 		if (list_a == list_b)
+		{
 			return (1);
+		}
 		/* And move the list */
-		list_a = list_a->next->next;
 		list_b = list_b->next;
-	} while (list_a && list_a->next && list_a->next->next);
-
+		list_a = list_a->next->next;
+	}
 	return (0);
 }
