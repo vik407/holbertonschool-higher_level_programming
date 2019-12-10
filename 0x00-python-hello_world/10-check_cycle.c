@@ -21,12 +21,11 @@ int check_cycle(listint_t *list)
 	/* Do a loop to check for a cycle */
 	do {
 		/* is a cycle */
-		if (list_a == list_a)
+		if (list_a == list_b)
 			return (1);
 		/* And move the list */
 		list_a = list_a->next->next;
 		list_b = list_b->next;
 	} while (list_a && list_a->next);
-
 	return (0);
 }

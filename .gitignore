@@ -1,2 +1,6 @@
 #gitignore file
+*
+!*.*
+!*/
 *main*
+*linked_lists*
