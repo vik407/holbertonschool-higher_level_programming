@@ -5,3 +5,5 @@
 !*/
 *main*
 *linked_lists*
+.vscode/*
+__pycache__/*
