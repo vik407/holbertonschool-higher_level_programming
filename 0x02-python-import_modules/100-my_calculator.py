@@ -15,4 +15,4 @@ if __name__ == "__main__":
         exit(1)
     else:
         eq = {'+': add(a, b), '*': mul(a, b), '-': sub(a, b), '/': div(a, b)}
-        print ("{:d} {:s} {:d} = {:d}".format(a, op, b, eq.get(op)))
+        print ("{:d} {:s} {:d} = {:d}".format(a, op, b, eq.get(op)), end='\n')
