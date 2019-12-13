@@ -11,8 +11,8 @@ if __name__ == "__main__":
     b = int(argv[3])
     if op not in ['+', '-', '*', '/']:
         msg = "Unknown operator. Available operators: +, -, * and /"
-        print (msg, end='\n')
+        print(msg, end='\n')
         exit(1)
     else:
         eq = {'+': add(a, b), '*': mul(a, b), '-': sub(a, b), '/': div(a, b)}
-        print ("{:d} {:s} {:d} = {:d}".format(a, op, b, eq.get(op)), end='\n')
+        print("{:d} {:s} {:d} = {:d}".format(a, op, b, eq.get(op)), end='\n')
