@@ -9,7 +9,7 @@ if __name__ == "__main__":
     a = int(argv[1])
     op = str(argv[2])
     b = int(argv[3])
-    if op not in ['+','-','*','/']:
+    if op not in ['+', '-', '*', '/']:
         msg = "Unknown operator. Available operators: +, -, * and /"
         print(msg, end='\n')
         exit(1)
