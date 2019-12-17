@@ -8,3 +8,5 @@
 .vscode/*
 __pycache__/
 *.py[cod]
+0x02-python-import_modules/add_0.py
+0x02-python-import_modules/calculator_1.py
