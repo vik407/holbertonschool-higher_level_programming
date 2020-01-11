@@ -1,0 +1,64 @@
+The ``add_integer`` module
+======================
+
+Using ``add_integer`` a function that add 2 integers
+-------------------
+
+from 0-add_integer import add_integer.
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Adding one integer
+    >>> add_integer(2)
+    100
+
+Adding two integers
+    >>> add_integer(1, 2)
+    3
+
+Adding One positive, one negative:
+    >>> add_integer(5,-2)
+    3
+
+Adding first parameter as a letter:
+    >>> add_integer("A",-2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Adding second parameter as a letter:
+    >>> add_integer(1, "B")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+Adding two letters:
+    >>> add_integer("A","B")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Adding a tuplet:
+    >>> add_integer((1, 2), 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Adding a list:
+    >>> add_integer([1, 2], 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+First parameter as None:
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Two parameters as None:
+    >>> add_integer(None, None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+One parameter as False:
+    >>> add_integer(False, 2)
+    2
+
+Two parameters as False:
+    >>> add_integer(False, False)
+    0
