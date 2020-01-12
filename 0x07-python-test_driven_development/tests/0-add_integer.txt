@@ -62,3 +62,8 @@ One parameter as False:
 Two parameters as False:
     >>> add_integer(False, False)
     0
+
+No parameters
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
