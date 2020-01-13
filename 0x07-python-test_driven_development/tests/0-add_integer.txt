@@ -30,6 +30,11 @@ Adding second parameter as a letter:
     Traceback (most recent call last):
     TypeError: b must be an integer
 
+Adding second parameter as a letter:
+    >>> add_integer(1, 'b')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
 Adding two letters:
     >>> add_integer("A","B")
     Traceback (most recent call last):
