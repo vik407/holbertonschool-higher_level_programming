@@ -11,7 +11,7 @@ def text_indentation(text):
     @text = must be a string, otherwise raise a TypeError exception with the
     message text must be a string
     """
-    if isinstance(text, (str)) is None or text is False:
+    if isinstance(text, (str)) is False or text is None:
         raise TypeError("text must be a string")
     flag = False
     _text = text.strip()
