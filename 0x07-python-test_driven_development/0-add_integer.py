@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 add_integer - a function that adds 2 integers.
+
 Returns an integer: the addition of a and b
 """
 
