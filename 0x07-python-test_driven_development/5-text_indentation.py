@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-print_square - a function that prints a text with 2 new lines after each of
+text_indentation - a function that prints a text with 2 new lines after each of
 these characters: ., ? and :
-Returns a text
+Returns characters printed
 """
 
 
