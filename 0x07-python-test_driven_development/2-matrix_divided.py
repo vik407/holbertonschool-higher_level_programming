@@ -15,12 +15,14 @@ def matrix_divided(matrix, div):
     msg_3 = "div must be a number"
     msg_4 = "division by zero"
     equals = []
+    if (matrix == []):
+        raise TypeError(msg_1)
     if isinstance(matrix, (list)) is None or matrix is False:
         raise TypeError(msg_1)
     if isinstance(div, (int, float)) is False:
         raise TypeError(msg_3)
-    if div is 0:
-        raise TypeError(msg_4)
+    if (div == 0):
+        raise ZeroDivisionError(msg_4)
     if(len(set([len(_list) for _list in matrix])) > 1):
         raise TypeError(msg_2)
     for row in matrix:
