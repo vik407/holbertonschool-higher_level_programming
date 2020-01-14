@@ -23,5 +23,5 @@ def text_indentation(text):
         else:
             print(i, end="")
         if any(j in i for j in pattern):
-            print ("", end="\n\n")
+            print("", end="\n\n")
             flag = True
