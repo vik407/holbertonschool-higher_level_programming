@@ -10,12 +10,12 @@ def print_square(size):
     @size = is the size length of the square
     """
     if isinstance(size, (int)) is None or size is False:
-        raise TypeError("size must be an integer")
-    if isinstance(size, (float)) is None and size < 0:
-        raise TypeError("size must be an integer")
-    if size < 0:
+        raise ValueError("size must be an integer")
+    if isinstance(size, (float)) is None:
+        raise ValueError("size must be an integer")
+    if int(size) < 0:
         raise ValueError("size must be >= 0")
-    for row in range(size):
-        for col in range(size):
+    for row in range(int(size)):
+        for col in range(int(size)):
             print("{:s}".format("#"), end="")
         print()

@@ -4,7 +4,7 @@ The ``say_my_name`` module
 Using ``say_my_name``
 -------------------
 
-from 2-say_my_name import say_my_name.
+from 3-say_my_name import say_my_name.
 
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
