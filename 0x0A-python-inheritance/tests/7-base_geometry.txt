@@ -1,0 +1,47 @@
+The ``base_geometry`` module
+======================
+
+Using ``base_geometry``
+-------------------
+
+import string
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Empty
+>>> BaseG = BaseGeometry()
+>>> BaseG.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Empty first
+>>> BaseG.integer_validator("", 1)
+
+Empty second
+>>> BaseG.integer_validator("test")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Tuple
+>>> BaseG.integer_validator("tuple", (1, 2))
+Traceback (most recent call last):
+TypeError: tuple must be an integer
+
+None
+>>> BaseG.integer_validator("none", None)
+Traceback (most recent call last):
+TypeError: none must be an integer
+
+False
+>>> BaseG.integer_validator("False", False)
+Traceback (most recent call last):
+TypeError: False must be an integer
+
+zero
+>>> BaseG.integer_validator("zero", 0)
+Traceback (most recent call last):
+ValueError: zero must be greater than 0
+
+area not implemented
+>>> BaseG.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
