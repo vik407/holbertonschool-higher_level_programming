@@ -1,0 +1,50 @@
+The ``my_list`` module
+======================
+
+Using ``print_sorted`` a function that add 2 integers
+-------------------
+
+from 1-my_list import MyList.
+
+>>> MyList = __import__('1-my_list').MyList
+
+Basic test (1, 2)
+    >>> my_list = MyList()
+    >>> my_list.append(2)
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [2, 1]
+    >>> my_list.print_sorted()
+    [1, 2]
+
+Basic negative (-1, -2)
+    >>> my_list = MyList()
+    >>> my_list.append(-2)
+    >>> my_list.append(-1)
+    >>> print(my_list)
+    [-2, -1]
+    >>> my_list.print_sorted()
+    [-2, -1]
+
+Chars ("a", "b")
+    >>> my_list = MyList()
+    >>> my_list.append("b")
+    >>> my_list.append("a")
+    >>> print(my_list)
+    ['b', 'a']
+    >>> my_list.print_sorted()
+    ['a', 'b']
+
+empty
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+    >>> my_list.print_sorted()
+    []
+
+institiate 
+    >>> my_list = MyList([19, 8, 20, 6, 15, 3, 7, 2])
+    >>> _my_list = my_list.print_sorted()
+    [2, 3, 6, 7, 8, 15, 19, 20]
+    >>> print(my_list)
+    [19, 8, 20, 6, 15, 3, 7, 2]
