@@ -13,12 +13,6 @@ size is not int
     Traceback (most recent call last):
     ValueError: size must be an integer
 
-
-size is float and less than 0
-    >>> print_square(-1.3)
-    Traceback (most recent call last):
-    ValueError: size must be >= 0
-
 Empty
     >>> print_square()
     Traceback (most recent call last):
