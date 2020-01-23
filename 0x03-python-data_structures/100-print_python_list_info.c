@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <object.h>
+#include <listobject.h>
 #include <stdio.h>
 /**
  * print_python_list_info - Create a C function that prints some basic info
