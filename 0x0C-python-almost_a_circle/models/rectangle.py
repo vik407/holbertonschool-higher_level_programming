@@ -8,7 +8,8 @@ class Rectangle(Base):
     """Rectangle class for Holberton's 0x0C. Python - Almost a circle project
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialization of the class"""
+        """Initialization of the class
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -17,12 +18,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Width getter"""
+        """Width getter
+        """
         return self.__width
 
     @width.setter
     def width(self, width):
-        """Width setter"""
+        """Width setter
+        """
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -31,12 +34,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Height getter"""
+        """Height getter
+        """
         return self.__height
 
     @height.setter
     def height(self, height):
-        """Height setter"""
+        """Height setter
+        """
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
@@ -45,12 +50,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x getter"""
+        """x getter
+        """
         return self.__x
 
     @x.setter
     def x(self, x):
-        """x setter"""
+        """x setter
+        """
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -59,12 +66,14 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y getter"""
+        """y getter
+        """
         return self.__y
 
     @y.setter
     def y(self, y):
-        """y setter"""
+        """y setter
+        """
         if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -72,13 +81,21 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
-        """Returns the area value of the Rectangle instance."""
+        """Returns the area value of the Rectangle instance.
+        """
         return self.__height * self.__width
 
     def display(self):
-        """Prints in stdout the Rectangle instance with the character #"""
+        """Prints in stdout the Rectangle instance with the character #
+        """
         for i in range(self.__y):
             print()
         for i in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
+
+    def __str__(self):
+        """Update the class Rectangle by overriding the __str__ method
+        """
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
