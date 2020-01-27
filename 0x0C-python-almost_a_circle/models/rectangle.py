@@ -114,17 +114,10 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """returns the dictionary representation of a Rectangle
-        id, width, height, x, y
+        """Adding the public method def to_dictionary(self): that returns the
+        dictionary representation of a Rectangle: id, width, height, x, y
         """
         dict = {}
         for key, value in vars(self).items():
-            if key.startswith("_"):
-                if not key.endswith("width") and not key.endswith("height"):
-                    idx = key.index("__")
-                    dict[key[idx + 2:]] = value
-                else:
-                    dict["size"] = value
-            else:
-                dict[key] = value
+            dict[key.split("__")[-1]] = value
         return dict
