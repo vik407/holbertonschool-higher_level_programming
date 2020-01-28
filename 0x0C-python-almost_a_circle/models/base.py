@@ -24,7 +24,7 @@ class Base:
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        if type(list_dictionaries) is not list:
+        if type(list_dictionaries) != list:
             raise TypeError("list_dictionaries must be a list")
         if any(type(s) != dict for s in list_dictionaries):
             raise TypeError("list_dictionaries must contain dictionaries")
