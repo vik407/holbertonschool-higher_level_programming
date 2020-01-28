@@ -71,3 +71,17 @@ class Base:
         insta = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         insta.update(**dictionary)
         return insta
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances
+        """
+        filename = str(cls).split(".")[-1][:-2] + ".json"
+        if not os.path.exists(filename):
+            return []
+        res = []
+        with open(filename, "r") as file:
+            dicts = cls.from_json_string(file.readline())
+        for d in dicts:
+            res.append(cls.create(**d))
+        return res
