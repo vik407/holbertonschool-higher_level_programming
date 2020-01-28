@@ -64,5 +64,28 @@ class RectangleTest(unittest.TestCase):
             "y must be an integer",
             str(x.exception))
 
+    def test_rectangle_float(self):
+        """Float values"""
+        with self.assertRaises(TypeError) as x:
+            r = Rectangle(5, 0.1)
+        self.assertEqual(
+            "height must be an integer",
+            str(x.exception))
+        with self.assertRaises(TypeError) as x:
+            r = Rectangle(0.1, 5)
+        self.assertEqual(
+            "width must be an integer",
+            str(x.exception))
+        with self.assertRaises(TypeError) as x:
+            r = Rectangle(10, 5, 0.1)
+        self.assertEqual(
+            "x must be an integer",
+            str(x.exception))
+        with self.assertRaises(TypeError) as x:
+            r = Rectangle(10, 5, 0, 0.1)
+        self.assertEqual(
+            "y must be an integer",
+            str(x.exception))
+
 if __name__ == '__main__':
     unittest.main()
