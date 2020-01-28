@@ -63,3 +63,15 @@ class Base:
             if type(d) != dict:
                 raise ValueError("json_string must contain dictionaries")
         return loads
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set.
+        """
+        insta = None
+        if cls.__name__ == "Rectangle":
+            insta = cls(1, 1)
+        else:
+            cls(1)
+        insta.update(**dictionary)
+        return insta
