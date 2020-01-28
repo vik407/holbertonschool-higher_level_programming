@@ -85,3 +85,23 @@ class Base:
         for d in dicts:
             res.append(cls.create(**d))
         return res
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Serializes and deserializes in CSV"""
+        filename = cls.__name__ + ".csv"
+        rectangle_head = ["id", "width", "height", "x", "y"]
+        square_head = ["id", "size", "x", "y"]
+        head = rectangle_head if cls.__name__ == "Rectangle" else square_head
+        res = []
+        if os.path.exists(filename):
+            with open(filename, "r") as f:
+                reader = csv.reader(f, delimiter=',')
+                for i, row in enumerate(reader):
+                    if i > 0:
+                        new = cls(1, 1)
+                        for j, e in enumerate(row):
+                            if e:
+                                setattr(new, head[j], int(e))
+                        res.append(new)
+        return res
