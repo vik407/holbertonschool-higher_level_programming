@@ -2,10 +2,10 @@
 -- Fields
 SELECT tv_genres.name AS genre, COUNT(tv_show_genres.show_id) AS number_shows
 -- Join
-FROM tv_show_genres INNER JOIN tv_genres
+FROM tv_show_genres LEFT JOIN tv_genres
 -- Join condition
 ON tv_show_genres.genre_id = tv_genres.id
 -- Group by
-GROUP BY tv_genres.name
+GROUP BY genre
 -- Order data
 ORDER BY number_shows DESC;
