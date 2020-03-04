@@ -1,6 +1,6 @@
 -- Lists all genres from hbtn_0d_tvshows and displays the number of shows
--- Fields
-SELECT tv_genres.name AS genre, COUNT(*) AS number_shows
+-- Lists all genres from hbtn_0d_tvshows and displays the number of shows
+SELECT tv_genres.name AS genre, count(*) AS number_shows
 -- Join
 FROM tv_show_genres LEFT JOIN tv_genres
 -- Join condition
