@@ -21,7 +21,7 @@ def main():
                          charset="utf8")
     con = db.cursor()
     con.execute("SELECT * FROM states WHERE BINARY " +
-                "name='{}' ".format(st_name) +"ORDER BY id ASC")
+                "name='{}' ".format(st_name) + "ORDER BY id ASC")
     rows = con.fetchall()
     for row in rows:
         print(row)
