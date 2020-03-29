@@ -28,7 +28,5 @@ def main():
 
 
 if __name__ == '__main__':
-    65
-
    """Run it if main"""
     main()
