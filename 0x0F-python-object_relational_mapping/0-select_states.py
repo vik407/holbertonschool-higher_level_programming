@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Write a script that lists all states from the database
+"""Write a script that lists all states from the database
 """
 
 
@@ -16,7 +15,6 @@ if __name__ == "__main__":
                          user=mysql_username, passwd=mysql_password,
                          db=database_name, charset="utf8")
     cur = db.cursor()
-    # The execute function requires one parameter, the query.
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     all_rows = cur.fetchall()
     for row in all_rows:
