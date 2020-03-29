@@ -19,7 +19,7 @@ def main():
                          charset="utf8")
     con = db.cursor()
     con.execute("SELECT cities.id, cities.name, states.name FROM cities " +
-            "JOIN states ON cities.state_id = states.id ORDER BY id ASC;")
+                "JOIN states ON cities.state_id = states.id ORDER BY id ASC;")
     rows = con.fetchall()
     for row in rows:
         print(row)
