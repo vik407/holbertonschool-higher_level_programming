@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# Write a script that prints the first State object from the database
-# hbtn_0e_6_usa
+# Write a script that deletes all State objects with a name containing
+# the letter a from the database hbtn_0e_6_usa
 
 import sys
 from model_state import Base, State
@@ -19,8 +19,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    st_name = session.query(State).filter(State.name.like('%a%')).all()
-    for state in st_names:
+    states = session.query(State).filter(State.name.like('%a%')).all()
+    for state in states:
         session.delete(state)
     session.commit()
 
