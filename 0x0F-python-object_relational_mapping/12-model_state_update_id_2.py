@@ -24,5 +24,6 @@ if __name__ == '__main__':
         st_new.name = "New Mexico"
     except Exception:
         pass
+    session.commit()
 
     session.close()
