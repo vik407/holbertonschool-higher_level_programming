@@ -8,7 +8,8 @@ def find_peak(list_of_integers):
     if not list_of_integers:
         return None
     return _find(list_of_integers, 0, len(list_of_integers) - 1,
-              len(list_of_integers))
+                 len(list_of_integers))
+
 
 def _find(arr, low, high, n):
     """Helper func _find"""
