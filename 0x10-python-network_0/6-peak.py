@@ -4,21 +4,20 @@
 
 
 def find_peak(list_of_integers):
-    """Finds a peak in a list of integers"""
+    """Function to find a peak"""
     if not list_of_integers:
         return None
-    mid = int(len(list_of_integers) / 2)
-    start = 0
-    end = len(list_of_integers) - 1
-    while mid > start and mid < end:
-        if list_of_integers[mid - 1] > list_of_integers[mid]:
-            end = mid
-            mid = int(mid/2)
-            continue
-        if list_of_integers[mid + 1] > list_of_integers[mid]:
-            start = mid
-            mid = int((end + mid)/2)
-            continue
-        else:
-            break
-    return list_of_integers[mid]
+    return _find(list_of_integers, 0, len(list_of_integers) - 1,
+              len(list_of_integers))
+
+def _find(arr, low, high, n):
+    """Helper func _find"""
+    mid = low + (high - low)//2
+
+    if (mid == 0 or arr[mid - 1] <= arr[mid]) and\
+       (mid == n - 1 or arr[mid + 1] <= arr[mid]):
+        return arr[mid]
+    elif (mid > 0 and arr[mid - 1] > arr[mid]):
+        return _find(arr, low, mid - 1, n)
+    else:
+        return _find(arr, mid + 1, high, n)
