@@ -13,7 +13,7 @@ if __name__ == "__main__":
         request = post("http://0.0.0.0:5000/search_user",
                        data={'q': q}).json()
         if "id" in request and "name" in request:
-            print("[{}] {}".format(r["id"], r["name"]))
+            print("[{}] {}".format(request["id"], request["name"]))
         else:
             print("No result")
     except ValueError:
